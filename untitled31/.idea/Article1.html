@@ -17,7 +17,7 @@
         }
     </script>
 </head>
-<body onload="startTime()">
+<body onload="change();startTime()">
 <div class="container-fluid">
     <nav class="container-fluid navbar navbar-default navbar-fixed" style="background: crimson">
         <div class="navbar-header">
@@ -95,25 +95,68 @@
                     <!--                    Audio-->
                     <div class="container-fluid row" style="max-width: 100%;display: flex">
                         <div class="col-xs-9" style="margin-top:2vw">
-                            <audio controls preload="auto" style="width: 100%;">
+                            <audio controls preload="auto" style="width: 100%;" id="audio1">
                                 <source src="1.m4a">
                             </audio>
+                            <audio controls preload="auto" style="width: 100%;" id="audio2" class="hidden">
+                                <source src="2.m4a">
+                            </audio>
+                            <audio controls preload="auto" style="width: 100%;" id="audio3" class="hidden">
+                                <source src="4.m4a">
+                            </audio>
+                            <audio controls preload="auto" style="width: 100%;" id="audio4" class="hidden">
+                                <source src="3.m4a">
+                            </audio>
                         </div>
-                        <div class="col-xs-3" style="margin-top: 2vw">
-                            <div>
-                                <select>
-                                    <option value="NamBac">Nam Miền Bắc</option>
+                        <div class="col-xs-3" style="margin-top: 2vw" id="selector">
+                            <div id="selector.1">
+                                <select id="selector.1.1">
+                                    <option id="NB" value="NamBac">Nam Miền Bắc</option>
                                     <option value="NuBac">Nữ Miền Bắc</option>
                                     <option value="NamNam">Nam Miền Nam</option>
                                     <option value="NuNam">Nữ Miền Nam</option>
                                 </select>
                             </div>
                             <div>
-                                <button type="submit">OK</button>
+                                <button type="submit" onclick="change()">OK</button>
+                                <script>
+                                    function change() {
+                                        var selected = [];
+                                        for (var option of document.getElementById('selector.1.1').options) {
+                                            if (option.selected) {
+                                                selected.push(option.value);
+                                            }
+                                        }
+                                        if (selected[0] === "NamBac") {
+                                            document.getElementById('audio1').classList.replace("hidden", "visible");
+                                            document.getElementById('audio2').classList.add( "hidden");
+                                            document.getElementById('audio3').classList.add( "hidden");
+                                            document.getElementById('audio4').classList.add( "hidden");
+                                        }
+                                        if (selected[0] === "NuBac") {
+                                            document.getElementById('audio2').classList.replace("hidden", "visible");
+                                            document.getElementById('audio1').classList.add( "hidden");
+                                            document.getElementById('audio3').classList.add( "hidden");
+                                            document.getElementById('audio4').classList.add( "hidden");
+                                        }
+                                        if (selected[0] === "NamNam") {
+                                            document.getElementById('audio3').classList.replace("hidden", "visible");
+                                            document.getElementById('audio1').classList.add( "hidden");
+                                            document.getElementById('audio2').classList.add( "hidden");
+                                            document.getElementById('audio4').classList.add( "hidden");
+                                        }
+                                        if (selected[0] === "NuNam") {
+                                            document.getElementById('audio4').classList.replace("hidden", "visible");
+                                            document.getElementById('audio1').classList.add("hidden");
+                                            document.getElementById('audio2').classList.add( "hidden");
+                                            document.getElementById('audio3').classList.add( "hidden");
+                                        }
+                                    }
+                                </script>
                             </div>
                         </div>
                     </div>
-                    <!--                        Thumnail-->
+                    <!--                        Thumbnail-->
                     <div class="container-fluid">
                         <table>
                             <thead>
