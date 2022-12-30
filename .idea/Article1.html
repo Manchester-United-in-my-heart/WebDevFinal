@@ -108,17 +108,16 @@
                                 <source src="audio\article1\3.m4a">
                             </audio>
                         </div>
-                        <div class="col-xs-3" style="margin-top: 2vw" id="selector">
-                            <div id="selector.1">
-                                <select id="selector.1.1">
+                        <div class="col-xs-3" style="margin-top: 2vw;position:relative;padding-bottom: 0vw" id="selector">
+                            <div style="height: 50%"></div>
+                            <div id="selector.1" style="">
+                                <select id="selector.1.1" onchange="change()">
                                     <option id="NB" value="NamBac">Nam Miền Bắc</option>
                                     <option value="NuBac">Nữ Miền Bắc</option>
                                     <option value="NamNam">Nam Miền Nam</option>
                                     <option value="NuNam">Nữ Miền Nam</option>
                                 </select>
                             </div>
-                            <div>
-                                <button type="submit" onclick="change()">OK</button>
                                 <script>
                                     function change() {
                                         var selected = [];
@@ -153,7 +152,6 @@
                                         }
                                     }
                                 </script>
-                            </div>
                         </div>
                     </div>
                     <!--                        Thumbnail-->

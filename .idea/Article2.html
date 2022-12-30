@@ -87,8 +87,9 @@
                         </audio>
                     </div>
                     <div class="col-xs-3" style="margin-top: 2vw">
+                        <div style="height: 50%"></div>
                         <div>
-                            <select id="selector.1.1">
+                            <select id="selector.1.1" onchange="change()">
                                 <option value="NamBac">Nam Miền Bắc</option>
                                 <option value="NuBac">Nữ Miền Bắc</option>
                                 <option value="NamNam">Nam Miền Nam</option>
@@ -96,7 +97,6 @@
                             </select>
                         </div>
                         <div>
-                            <button type="submit" onclick="change()">OK</button>
                             <script>
                                 function change() {
                                     var selected = [];
