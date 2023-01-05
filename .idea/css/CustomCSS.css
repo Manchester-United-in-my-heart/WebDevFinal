@@ -1,0 +1,57 @@
+.img-hover img {
+    -webkit-transition: all .3s ease; /* Safari and Chrome */
+    -moz-transition: all .3s ease; /* Firefox */
+    -o-transition: all .3s ease; /* IE 9 */
+    -ms-transition: all .3s ease; /* Opera */
+    transition: all .3s ease;
+    position:relative;
+}
+.img-hover img:hover {
+    -webkit-transform:translateZ(0) scale(1.20); /* Safari and Chrome */
+    -moz-transform:scale(1.20); /* Firefox */
+    -ms-transform:scale(1.20); /* IE 9 */
+    -o-transform:translatZ(0) scale(1.20); /* Opera */
+    transform:translatZ(0) scale(1.20);
+    cursor: pointer;
+}
+.img-small-hover img {
+    -webkit-transition: all .3s ease; /* Safari and Chrome */
+    -moz-transition: all .3s ease; /* Firefox */
+    -o-transition: all .3s ease; /* IE 9 */
+    -ms-transition: all .3s ease; /* Opera */
+    transition: all .3s ease;
+    position:relative;
+}
+.img-small-hover img:hover {
+    -webkit-transform:translateZ(0) scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:translatZ(0) scale(1.05); /* Opera */
+    transform:translatZ(0) scale(1.05);
+    cursor: pointer;
+}
+#1
+{
+
+}
+#1:hover
+{
+    scale: 1.05;
+}
+.img-hover p:hover{
+color: coral;
+}
+
+.img-hover:hover:after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    width:30px;
+    height:30px;
+}
+audio .muted
+{
+
+}

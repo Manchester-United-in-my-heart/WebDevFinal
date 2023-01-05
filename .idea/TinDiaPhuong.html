@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tin Địa Phương</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css\CustomCSS.css">
+    <script>
+        function startTime() {
+            const today = new Date();
+            document.getElementById("realtime").innerHTML = today.toString();
+            setTimeout(startTime, 1000);
+        }
+    </script>
+</head>
+<body onload="startTime()">
+<style>
+    .box {
+        background: #000;
+        color: white;
+    }
+</style>
+<div class="container-fluid">
+    <nav class="container-fluid navbar navbar-default navbar-fixed" style="background: crimson">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="MainPage.html" style="color:white">
+                NHÂN DÂN
+            </a>
+        </div>
+        <form class="hidden-xs navbar-form navbar-right" action="/action_page.php">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="Article2.html" style="color:white">Tin mới</a></li>
+            <li><a href="error404.html" style="color:white">Tin địa phương</a></li>
+            <li class="d-none d-md-block"><a href="Dang_Ky.html" style="color:white">Đăng kí nhận tin </a></li>
+        </ul>
+    </nav>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="img\tinDiaPhuong\Screenshot 2022-12-17 223031.png" class="img-fluid" style="max-width:100% ">
+        </div>
+    </div>
+</div>
+<div class="hidden-xs row">
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-sm-4 col-md-4 col-lg-4" id="realtime"></div>
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="row col-md-5 col-sm-5 col-lg-5 text-right">
+        <div class="col-md-4 col-sm-4 col-lg-4">
+            <a href="error404.html"> Thời nay </a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-lg-4">
+            <a href="error404.html"> Nhân dân cuối tuần </a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-lg-4">
+            <a href="error404.html"> Nhân dân hàng tháng </a>
+        </div>
+    </div>
+    <div class="col-md-1 col-sm-1 col-lg-1" style="margin-left: 0vw"></div>
+</div>
+<!--Main Content-->
+<div class="container-fluid row">
+    <!--    City List-->
+    <!--    leftside-->
+    <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
+        <div class="text-left" style="font-weight: 900;padding-top:2vw">
+            TIN ĐỊA PHƯƠNG
+        </div>
+        <div class="text-center">
+            <img src="img\tinDiaPhuong\Screenshot%202022-12-19%20223515.png" style="max-width: 100%">
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <ul class="container-fluid list-group" style="padding-top: 2vw;">
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    TP. Hà Nội
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Tp. Hồ Chí Minh
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bà Rịa - Vũng Tàu
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    An Giang
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bắc Giang
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bắc Kạn
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bạc Liêu
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bắc Ninh
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bến Tre
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bình Dương
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bình Định
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bình Phước
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Bình Thuận
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Cà Mau
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Cần Thơ
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Cao Bằng
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Đà Nẵng
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Đắc Lắc
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Đồng Nai
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Đồng Tháp
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Gia Lai
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Hà Giang
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Hà Nam
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Hà Tĩnh
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Hải Dương
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Hải Phòng
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Hòa Bình
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Hưng Yên
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Kiên Giang
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Kon Tum
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Khánh Hòa
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Lai Châu
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Lạng Sơn
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Lào Cai
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Lâm Đồng
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Long An
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Nam Định
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Ninh Bình
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Ninh Thuận
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Nghệ An
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Phú Thọ
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Phú Yên
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Quảng Bình
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Quảng Nam
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Quảng Ninh
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Quảng Ngai
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Sóc Trăng
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Sơn La
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Tây Ninh
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Tiền Giang
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    TT Huế
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Tuyên Quang
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Thái Bình
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Thái Nguyên
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Thanh Hóa
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Trà Vinh
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Vĩnh Long
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Vĩnh Phúc
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Yên Bái
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Điện Biên
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Đắk Nông
+                </a>
+                <a href="error404.html" class="btn btn-primary col-xs-6 col-md-3 list-group-item">
+                    Hậu Giang
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-3 col-lg-3" style="padding-top:2vw">
+        <div class="list-group">
+            <div class="list-group">
+                <div class="list-group-item text-center" style="font-weight: bold">TIN ĐỌC NHIỀU</div>
+                <a href="error404.html" class="list-group-item text-center">
+                    <img src="img/tinDiaPhuong/download.jpg" style="max-width: 100%">
+                    Nhận định trước trận Argentina-Pháp: Nhà vô địch cận kề
+                </a>
+                <a href="error404.html" class="list-group-item text-center">
+                    <img src="img/tinDiaPhuong/download (2).jpg" style="max-width: 100%">
+                    Nhận định trước trận Croatia-Maroc: Ngẩng cao đầu rời giải đấu
+                </a>
+                <a href="error404.html" class="list-group-item text-center">
+                    <img src="img/tinDiaPhuong/download (3).jpg" style="max-width: 100%">
+                    Những thống kê thú vị về trận chung kết các kỳ World Cup
+                </a>
+                <a href="error404.html" class="list-group-item text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuK7UBLiZrUqrnyDswYry-4L-MpeLMDnaMjw&usqp=CAU" style="max-width: 100%">
+                    Người hâm mộ Argentina ăn mừng chức vô địch World Cup <span class="glyphicon glyphicon-play-circle"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="padding-top:2vw">
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="hidden-xs row panel panel-heading">
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            Nhân Dân
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            Báo Điện Tử Đảng Cộng Sản
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            BÁO ĐIỆN TỬ CHÍNH PHỦ
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            THÔNG TẤN XÃ VIỆT NAM
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            ĐÀI TIẾNG NÓI VIỆT NAM
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            BÁO QUÂN ĐỘI
+        </div>
+    </div>
+    <div class="row panel-body">
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+            <img src="img\tinDiaPhuong\Screenshot 2022-12-17 223031.png" style="max-width: 100%">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 pull-right">
+            <p style="font-size: 2vw">Tổng Biên tập: Lê Quốc Minh</p>
+            <p style="font-size: 2vw">Trụ sở chính: 71 Hàng Trống - Hà Nội.</p>
+            <p style="font-size: 2vw">Tel: (84) 24 382 54231/382 54232 Fax: (84) 24 382 55593.</p>
+            <p style="font-size: 2vw">E-mail: nhandandientu@nhandan.vn - nhandandientutiengviet@gmail.com</p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

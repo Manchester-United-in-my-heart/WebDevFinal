@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐĂNG KÝ NHẬN TIN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css\CustomCSS.css">
+    <script>
+        function startTime() {
+            const today = new Date();
+            document.getElementById("realtime").innerHTML = today.toString();
+            setTimeout(startTime, 1000);
+        }
+    </script>
+</head>
+<body onload="startTime()">
+<style>
+    .box {
+        background: #000;
+        color: white;
+    }
+</style>
+<div class="container-fluid">
+    <nav class="container-fluid navbar navbar-default navbar-fixed" style="background: crimson">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="MainPage.html" style="color:white">
+                NHÂN DÂN
+            </a>
+        </div>
+        <form class="hidden-xs navbar-form navbar-right" action="/action_page.php">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="Article1.html" style="color:white">Tin mới</a></li>
+            <li><a href="TinDiaPhuong.html" style="color:white">Tin địa phương</a></li>
+            <li class="d-none d-md-block"><a href="error404.html" style="color:white">Đăng kí nhận tin </a></li>
+        </ul>
+    </nav>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="img\dang_Ky\Screenshot 2022-12-17 223031.png" class="img-fluid" style="max-width:100% ">
+        </div>
+    </div>
+</div>
+<div class="hidden-xs row">
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-sm-4 col-md-4 col-lg-4" id="realtime"></div>
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="row col-md-5 col-sm-5 col-lg-5 text-right">
+        <div class="col-md-4 col-sm-4 col-lg-4">
+            <a href="error404.html"> Thời nay </a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-lg-4">
+            <a href="error404.html"> Nhân dân cuối tuần </a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-lg-4">
+            <a href="error404.html"> Nhân dân hàng tháng </a>
+        </div>
+    </div>
+    <div class="col-md-1 col-sm-1 col-lg-1" style="margin-left: 0vw"></div>
+</div>
+<!--header-->
+<hr/>
+<div class="container-fluid text-center" style="padding-top: 1vw; font-weight: bolder;font-size: 5vw">
+    ĐĂNG KÝ NHẬN TIN
+</div>
+<div class="container-fluid row text-center" style="padding-bottom: 5vw">
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding: 1vw;">
+        <input id="email" type="text" placeholder="Email:">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding: 1vw;">
+        <input id="phone" type="text" placeholder="Số Điện Thoại:">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding: 1vw;">
+        <input id="name" type="text" placeholder=" Họ va tên: ">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding: 1vw;">
+        <input id="DOB" type="text" placeholder="Ngay Sinh: ">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding: 1vw">
+    <button type="submit" onclick="checkEmailValid()">Send</button>
+    </div>
+    <script>
+        function checkValid(s) {
+            var k = false;
+            if (s.match("@gmail.com"))
+                k = true;
+            return k;
+        }
+        function checkEmailValid() {
+            var s = document.getElementById("email").value;
+            var p = document.getElementById("phone").value;
+            var n = document.getElementById("name").value;
+            var d = document.getElementById("DOB").value;
+            if (!s&&!p&&!n&&!d)
+            {
+                window.alert("Vui lòng điền đầy đủ thông tin");
+            }
+            else if (!checkValid(s))
+            {
+                window.alert("Định dạng của email phai có dạng @gmail.com");
+            }
+            else if (localStorage.getItem(s))
+            {
+                window.alert("Email đã tồn tại trên hệ thống");
+            }
+            else
+            {
+                window.alert("Đăng ký nhận tin thành công")
+                localStorage.setItem(s,s.toString()+" "+p.toString()+" "+n.toString()+" "+d.toString());
+            }
+        }
+    </script>
+</div>
+<div class="container-fluid row text-center">
+    <p style="font-size: 3vw;font-weight:bolder"> ĐIỀU KHOẢN DỊCH VỤ </p>
+    <div class="col-xs-2 col-sm-2 col-lg-2"></div>
+    <div class="col-xs-8 col-sm-8 col-lg-8">
+    <p> Khi vào web của chúng tôi, người dùng tối thiểu phải 18 tuổi hoặc truy cập dưới sự giám sát của cha mẹ hay
+        người giám hộ hợp pháp.</p>
+
+    <p> Trang web này chỉ dùng để cung cấp thông tin sản phẩm, chúng tôi không phải nhà sản xuất nên những nhận xét
+        hiển thị trên web là ý kiến cá nhân của khách hàng, không phải của chúng tôi.</p>
+
+    <p> Nghiêm cấm sử dụng bất kỳ phần nào của trang web này với mục đích thương mại hoặc nhân danh bất kỳ đối tác thứ
+        ba nào nếu không được chúng tôi cho phép bằng văn bản. Nếu vi phạm bất cứ điều nào trong đây, quý khách hàng sẽ
+        chịu mọi phạt theo pháp luật hiện hành của nước Việt Nam</p>
+
+    <p> Quý khách phải đăng ký tài khoản với thông tin xác thực về bản thân và phải cập nhật nếu có bất kỳ thay đổi
+        nào. Mỗi người truy cập phải có trách nhiệm với mật khẩu, tài khoản và hoạt động của mình trên web.</p>
+
+    <p> Quý khách phải thông báo ngay cho chúng tôi biết khi tài khoản bị truy cập trái phép. Chúng tôi không chịu bất
+        kỳ trách nhiệm nào, dù trực tiếp hay gián tiếp, đối với những thiệt hại hoặc mất mát gây ra do quý khách không
+        tuân thủ quy định.</p>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> </div>
+</div>
+<div class="panel panel-default" style="bottom: 0;">
+    <div class="hidden-xs row panel panel-heading">
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            Nhân Dân
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            Báo Điện Tử Đảng Cộng Sản
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            BÁO ĐIỆN TỬ CHÍNH PHỦ
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            THÔNG TẤN XÃ VIỆT NAM
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            ĐÀI TIẾNG NÓI VIỆT NAM
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+            BÁO QUÂN ĐỘI
+        </div>
+    </div>
+    <div class="row panel-body">
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+            <img src="img\dang_Ky\Screenshot 2022-12-17 223031.png" style="max-width: 100%">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 pull-right">
+            <p style="font-size: 2vw">Tổng Biên tập: Lê Quốc Minh</p>
+            <p style="font-size: 2vw">Trụ sở chính: 71 Hàng Trống - Hà Nội.</p>
+            <p style="font-size: 2vw">Tel: (84) 24 382 54231/382 54232 Fax: (84) 24 382 55593.</p>
+            <p style="font-size: 2vw">E-mail: nhandandientu@nhandan.vn - nhandandientutiengviet@gmail.com</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
